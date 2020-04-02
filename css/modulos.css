@@ -2,10 +2,13 @@ body {
     background-color: #eceff1;
 }
 
-#exercicios .col-3 {
+#exercicios .painel {
     margin: 10px;
-    height: 500px;
+    min-height: 500px;
     background-color: #fff;
+
+    border: 1px solid #aaa; 
+    border-radius: 5px;
 }
 
 header, footer {    
@@ -14,6 +17,7 @@ header, footer {
     width: 100%;
     left: 0;
     padding: 10px;
+    z-index: 2;
 }
 
 header {
@@ -24,6 +28,7 @@ header {
 
 .container {
     margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 footer {
