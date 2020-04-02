@@ -150,14 +150,6 @@ botaoVerificaHabilidade.onclick = function (){
 
 
 
-   
-
-
-
-
-
-
-
 // FIM DO EXERCÍCIO 3
 
 // _____________________________________________________________________________________________________________________________________ //
@@ -206,3 +198,49 @@ botaoVerificarExperiencia.onclick = function (){
 
 
 // _____________________________________________________________________________________________________________________________________ //
+
+// EXERCÍCIO 5
+
+
+var devs = [
+    {
+    nome: "Diego",
+    habilidades: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+    nome: "Gabriel",
+    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+];
+   
+function habilidadesPorDev (){
+
+    var resposta = '';
+
+    for (dev of devs){
+
+        resposta += 'O ' + dev.nome + ' possui as possui as habilidades: \n';
+        resposta += dev.habilidades.join(', ')
+
+        resposta += '\n\n';
+    }
+
+    return resposta;
+
+}
+
+var botaoVerificaHabilidadeDevs = document.querySelector("#verificaHabilidadeDevs");
+
+botaoVerificaHabilidadeDevs.onclick = function (){
+    
+    var resposta = habilidadesPorDev ();
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Habilidades',
+        text: resposta,
+    }); 
+
+}
+
+// FIM DO EXERCÍCIO 5

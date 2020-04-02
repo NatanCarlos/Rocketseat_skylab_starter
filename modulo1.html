@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/modulos.css">
+  <link rel="stylesheet" href="css/modulos.css">
 
-  <title>Exercício 1</title>
+  <title>Módulo 1</title>
 </head>
 
 <body>
@@ -21,208 +21,212 @@
     <h1>Módulo 1</h1>
   </header>
 
-  <div class="container">   
+  <div class="container">
 
     <br>
 
     <div class="row" id="exercicios">
 
-      <div class="col-4 painel">
+      <div class="col-4">
+        <div class="painel">
 
-        <br>
+          <br>
 
-        <h3>Exercício 1</h3>
+          <h3>Exercício 1</h3>
 
-        <hr>
+          <hr>
 
-        <p>Crie uma função que dado o objeto a seguir, Retorne o seguinte conteúdo: </p>
-        <p>O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
-          nº 1293.</p>
+          <p>Crie uma função que dado o objeto a seguir, Retorne o seguinte conteúdo: </p>
+          <p>O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
+            nº 1293.</p>
 
-        <hr>
+          <hr>
 
-        <code>
-          var endereco = {
-          rua: "Rua dos pinheiros",
-          numero: 1293,
-          bairro: "Centro",
-          cidade: "São Paulo",
-          uf: "SP"
-          };
-        </code>
+          <code>
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+          </code>
 
-        <br><br>
-        <hr>
+          <br><br>
+          <hr>
 
-        <button class="btn btn-primary" id="retornaEndereco">Retornar endereço</button>
+          <button class="btn btn-primary" id="retornaEndereco">Retornar endereço</button>
 
-        <br><br>
+          <br><br>
 
+        </div>
       </div>
 
-      <div class="col-4 painel">
 
-        <br>
+      <div class="col-4">
+        <div class="painel">
 
-        <h3>Exercício 2</h3>
+          <br>
 
-        <hr>
+          <h3>Exercício 2</h3>
 
-        <p>Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:</p>
+          <hr>
 
-        <hr>
+          <p>Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:</p>
 
-        <code>
-          function pares(x, y) {
+          <hr>
+
+          <code>
+            function pares(x, y) {
             // código aqui
-           }
-           pares(32, 321);
-        </code>
+            }
+            pares(32, 321);
+          </code>
 
-        <br><br>
-        <hr>
+          <br><br>
+          <hr>
 
-        <input type="number" id="numeroInicio" class="form-control" placeholder="Primeiro número"> <br>
-        <input type="number" id="numeroFim" class="form-control"    placeholder="Segundo número"> 
+          <input type="number" id="numeroInicio" class="form-control" placeholder="Primeiro número"> <br>
+          <input type="number" id="numeroFim" class="form-control" placeholder="Segundo número">
 
-        <hr>
+          <hr>
 
-        <button class="btn btn-primary" id="calcularPares">Calcular pares</button>
+          <button class="btn btn-primary" id="calcularPares">Calcular pares</button>
 
-        <br><br>
+          <br><br>
 
+        </div>
       </div>
 
-      <div class="col-4 painel">
 
-        <br>
+      <div class="col-4">
+        <div class="painel">
 
-        <h3>Exercício 3</h3>
+          <br>
 
-        <hr>
-        
-        <p>Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
-          e retorna um booleano true/false caso exista ou não</p>
+          <h3>Exercício 3</h3>
 
-        <hr>
+          <hr>
 
-        <code>
-          function temHabilidade(skills) {
+          <p>Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
+            e retorna um booleano true/false caso exista ou não</p>
+
+          <hr>
+
+          <code>
+            function temHabilidade(skills) {
             // código aqui
-           }
-           var skills = ["Javascript", "ReactJS",  "React Native"];
-           temHabilidade(skills); // true ou false
-        </code>
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            temHabilidade(skills); // true ou false
+          </code>
 
-        <br>
-        <hr>
+          <br>
+          <hr>
 
-        
-        <input type="text" id="habilidade" class="form-control"    placeholder="Habilidade, ex: Javascript"> 
 
-        <hr>
+          <input type="text" id="habilidade" class="form-control" placeholder="Habilidade, ex: Javascript">
 
-        <button class="btn btn-primary" id="verificaHabilidade">Verificar habilidade</button>
+          <hr>
 
-        <br><br>
+          <button class="btn btn-primary" id="verificaHabilidade">Verificar habilidade</button>
 
+          <br><br>
+
+        </div>
       </div>
 
+      <div class="col-4">
+        <div class="painel">
 
-      <div class="col-4 painel">
+          <br>
 
-        <br>
+          <h3>Exercício 4</h3>
 
-        <h3>Exercício 4</h3>
+          <hr>
 
-        <hr>
-        
-        <p>Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:</p>
+          <p>Escreva uma função que dado um total de anos de estudo retorna o quão experiente o usuário é:</p>
 
-        <hr>
+          <hr>
 
-        <code>
-          function experiencia(anos) {
+          <code>
+            function experiencia(anos) {
             // código aqui
-           }
-           var anosEstudo = 7;
-           experiencia(anosEstudo);
-           // De 0-1 ano: Iniciante
-           // De 1-3 anos: Intermediário
-           // De 3-6 anos: Avançado
-           // De 7 acima: Jedi Master
-           
-        </code>
+            }
+            var anosEstudo = 7;
+            experiencia(anosEstudo);
+            // De 0-1 ano: Iniciante
+            // De 1-3 anos: Intermediário
+            // De 3-6 anos: Avançado
+            // De 7 acima: Jedi Master
 
-        <br>
-        <hr>
+          </code>
 
-       
-        <input type="number" id="anosDeEstudo" class="form-control"  placeholder="Anos de estudo"> 
+          <br>
+          <hr>
 
-        <hr>
 
-        <button class="btn btn-primary" id="verificarExperiencia">Verificar experiência</button>
+          <input type="number" id="anosDeEstudo" class="form-control" placeholder="Anos de estudo">
 
-        <br><br>
+          <hr>
 
+          <button class="btn btn-primary" id="verificarExperiencia">Verificar experiência</button>
+
+          <br><br>
+
+        </div>
       </div>
 
 
 
-      <div class="col-3 painel" style="display: none;">
+      <div class="col-4">
+        <div class="painel">
 
-        <br>
+          <br>
 
-        <h3>Exercício 5</h3>
+          <h3>Exercício 5</h3>
 
-        <hr>
-        
-        <p>Dado o seguinte vetor de objetos:</p>
+          <hr>
 
-        <hr>
+          <p>Dado o seguinte vetor de objetos:</p>
 
-        <code>
-          var usuarios = [
-          {
-          nome: "Diego",
-          habilidades: ["Javascript", "ReactJS", "Redux"]
-          },
-          {
-          nome: "Gabriel",
-          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
-          }
-         ];          
-        </code>
 
-        <br>
-        <br>
-        <p>Escreva uma função que produza o seguinte resultado:</p>
-        <br>
+          <code>
+            var usuarios = [
+            {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+          </code>
 
-        <code>
-          O Diego possui as habilidades: Javascript, ReactJS, Redux
-          O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
-        </code>
+          <br>
+          <br>
+          <p>Escreva uma função que produza o seguinte resultado:</p>
 
-        <hr>
+          <code>
+            O Diego possui as habilidades: Javascript, ReactJS, Redux
+            O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+          </code>
 
-       
-        <input type="number" id="anosDeEstudo" class="form-control"  placeholder="Anos de estudo"> 
+          <hr>
 
-        <hr>
+          <button class="btn btn-primary" id="verificaHabilidadeDevs">Verificar habilidades dos devs</button>
 
-        <button class="btn btn-primary" id="verificarExperiencia">Verificar experiência</button>
+          <br><br>
 
-        <br><br>
-
+        </div>
       </div>
 
     </div>
 
 
     <footer>
-        Natan Carlos Silva
+      Natan Carlos Silva
     </footer>
 
   </div>
