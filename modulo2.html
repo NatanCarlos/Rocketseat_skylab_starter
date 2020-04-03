@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/modulos.css">
+
+  <title>Módulo 2</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Módulo 2</h1>
+  </header>
+
+  <div class="container">
+
+    <br>
+
+    <div class="row" id="exercicios">
+
+      <div class="col-4">
+        <div class="painel">
+
+          <br>
+
+          <h3>Exercício 1</h3>
+
+          <hr>
+
+          <p>Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+            vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+            aparecer na tela</p>
+
+
+          <button class="btn btn-primary" id="botaoBox">Adicionar um quadrado</button>
+
+          <hr>
+          
+          <h3>2º exercício</h3>
+
+          <p>Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+            algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:</p>
+
+            <code>
+              function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+               }
+               var newColor = getRandomColor(); // #E943F0
+            </code>
+
+            <br><br>
+
+        </div>
+      </div>
+
+      <div class="col-8" >
+         <div id="divQuadrados" class="row"></div>
+      </div>
+
+
+      <div class="col-4">
+        <div class="painel">
+          
+          <br>
+            
+          <h3>Exercício 1</h3>
+
+          <hr>
+
+          <p>A partir do seguinte vetor:</p>
+
+
+          <code>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+          </code>
+
+          <br>
+          <br>
+
+          <p>Preencha uma lista (ul) no HTML com os itens da seguinte forma:</p>  
+            ● Diego<br>
+            ● Gabriel<br>
+            ● Lucas<br>
+            </p>
+
+          <div class="row">
+
+            <div class="col-6">              
+              <input type="text" id="nome" placeholder="Nome" name="nome" class="form-control">
+            </div>
+
+            <div class="col-6">              
+              <button class="btn btn-primary" id="botaoAdicionar">Adicionar</button>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      </div>
+
+
+
+    <footer>
+      Natan Carlos Silva
+    </footer>
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <script src="js/modulo2.js"></script>
+</body>
+
+</html>
