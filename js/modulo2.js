@@ -72,8 +72,9 @@ function adicionar (){
 
     nomes.push(nome.value);
 
+    console.log(nome.value);
     nome.value = '';
 
-    console.log(nome);
+    nome.focus();
 
 }
