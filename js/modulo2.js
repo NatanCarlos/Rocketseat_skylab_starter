@@ -59,22 +59,93 @@ botaoBox.onclick = function (){
 
 // EXERCÍCIOS 3 E 4
 
+// variáveis principais
 var nomes = ["Diego", "Gabriel", "Lucas"];
-
+var listaNomesHTML = document.querySelector("#listaNomes");
 var botaoAdicionar = document.querySelector('#botaoAdicionar');
+var inputNome = document.querySelector('#nome');
+
+// quando clica no botão de adicionar, executa a função de adicionar
 botaoAdicionar.onclick = function (){
     adicionar ();
 }
 
+// quando dá enter no input, também executa a função de adicionar
+inputNome.onkeyup = function (e){
+    if(e.keyCode == 13){
+        adicionar ();
+    }
+}
+
+// função de adicionar o nome na lista
 function adicionar (){
 
-    var nome = document.querySelector('#nome');
+    // se o valor estiver em branco, retorna false
+    if(!inputNome.value){
+        inputNome.focus();
+        return false;
+    }
 
-    nomes.push(nome.value);
+    // adiciona o nome na lista
+    nomes.push(inputNome.value);    
 
-    console.log(nome.value);
-    nome.value = '';
+    // esvazia o input
+    inputNome.value = '';
+    inputNome.focus();
 
-    nome.focus();
+    // prenche a lista
+    preencheNomes ();
+}
 
+// função que preenche a lista
+function preencheNomes (){
+
+    // esvazia a lista no html
+    listaNomesHTML.innerHTML = '';
+
+    // cria a lista nova no html baseada na lista do js
+    var table = document.createElement('table');
+    table.setAttribute('class', 'table table-bordered');
+    table.setAttribute('style', 'background-color: white;');
+
+    for (nome of nomes){
+        
+        // pega a posição atual da array
+        var posicao = nomes.indexOf(nome);
+
+        // cria uma td para o nome       
+        var tdNome = document.createElement('td');
+        tdNome.innerHTML = nome;       
+
+        // cria o botão excluir
+        var botaoExcluir = document.createElement('a');
+        botaoExcluir.setAttribute('href', '#listaNomes');
+        botaoExcluir.innerHTML = "X";
+        botaoExcluir.setAttribute('onclick', 'deletaNomes(' + posicao + ')');
+        botaoExcluir.setAttribute('style','color: red;');
+
+        // cria td e adiciona o botão excluir
+        var tdExcluir = document.createElement('td');
+        tdExcluir.appendChild(botaoExcluir);
+        tdExcluir.setAttribute('style','width: 20px;');
+
+        // cria a li e adiciona o texto e o botão de excluir
+        var tr = document.createElement('tr');
+        tr.appendChild(tdNome);
+        tr.appendChild(tdExcluir);
+
+        // adiciona a li na ul
+        table.appendChild(tr);
+    }
+
+    // adiciona tudo no html
+    listaNomesHTML.appendChild(table);
+}
+
+preencheNomes ();
+inputNome.focus();
+
+function deletaNomes (posicao){
+    nomes.splice(posicao, 1);
+    preencheNomes ();
 }
