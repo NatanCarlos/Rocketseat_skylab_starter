@@ -62,29 +62,19 @@ btnVerificaIdade.onclick = function (){
         inputIdade.focus();   
 
     })
-
     
 }
 
 
-
+// função que realmente vai chegar a idade
 function checaIdade(idade) {
 
+    // oculta a div que tem o botão e o input
     divSubmeteIdade.style.display  =  'none';
 
+    // retorna uma promisse
     return new Promise((resolve, reject) => 
-        setTimeout(() => idade >= 18 ? resolve() : reject(), 2000)
-    )
-    
+        setTimeout(() => idade >= 18 ? resolve() : reject(), 2000) // dentro de 2 segundos, se for maior de 18 resolve, se não reject
+    )    
    
 }
-
-/*
-checaIdade(20)
-    .then(function () {
-        console.log("Maior que 18");
-    })
-    .catch(function () {
-        console.log("Menor que 18");
-    });
-*/
