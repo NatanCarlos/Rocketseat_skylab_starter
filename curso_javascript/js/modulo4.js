@@ -78,3 +78,66 @@ function checaIdade(idade) {
     )    
    
 }
+
+// FIM DO EXERCÍCIO 1
+
+// ____________________________________________________________________________________________________________________________________________
+
+// EXERCÍCIO 2
+
+var buscarUsuarioGitHub = document.querySelector('#buscarUsuarioGitHub');   // botao que realiza a busca
+var userGitHub          = document.querySelector("#userGitHub");            // input com o nome de usuário
+var retornoGit          = document.querySelector("#retornoGit");            // div que contém o retorno
+
+// quando clicar no botão, vai fazer a busca
+buscarUsuarioGitHub.onclick = function(){
+    
+    // Escreve carregando na div 
+    retornoGit.innerHTML = 'Carregando...';
+
+    // utiliza o axios pra fazer a requisição no usuário digitado no input
+    axios.get('https://api.github.com/users/' + userGitHub.value + '/repos')
+
+        // se der certo, vai processar
+        .then(function(response){
+
+            console.log(response);
+
+            // cria o título e a ul da lista
+            retornoGit.innerHTML = '<h4>Repositórios: </h4>';
+            var ul = document.createElement('ul');
+
+            // faz o loop nos repositórios
+            for (repo of response.data) {
+
+                // cria a li e coloca o nome do repositório
+                var li = document.createElement('li');
+                li.innerHTML = repo.name;
+                
+                // adiciona na lista
+                ul.appendChild(li);
+            }
+            
+            // escreve a ul na div
+            retornoGit.appendChild(ul);
+
+        })
+
+        // se der erro, vai tratar
+        .catch(function(error){
+
+            console.log(error);
+
+            // escreve o erro na div retorno
+            retornoGit.innerHTML = error;
+
+            // faz o sweet alert no erro
+            Swal.fire({
+                icon: 'error',
+                title: 'Ocorreu um erro',
+                text: error,
+            }); 
+
+        })        
+
+}

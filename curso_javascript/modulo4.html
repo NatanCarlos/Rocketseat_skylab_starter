@@ -42,15 +42,42 @@
 
           <div id="divSubmeteIdade">
 
-            <input type="number" id="inputIdade" class="form-control" placeholder="Digite a idade do usuário"><br>
-            <button class="btn btn-primary" id="btnVerificaIdade">Verificar idade</button>
+              <input type="number" id="inputIdade" class="form-control" placeholder="Digite a idade do usuário"><br>
+              <button class="btn btn-primary" id="btnVerificaIdade">Verificar idade</button>
 
-        </div> 
+          </div> 
 
         </div>
       </div>
 
+
+      <div class="col-4">
+        <div class="painel">
+          
+          <br>
+
+          <h3>Exercício 2</h3>
+
+          <hr>
+
+          <p>Crie uma tela com um input que deve receber o nome de um usuário no Github. Após digitar o
+            nome do usuário e clicar no botão buscar a aplicação deve buscar pela API do Github (conforme
+            URL abaixo) os dados de repositórios do usuário e mostrá-los em tela:
+            URL de exemplo: https://api.github.com/users/diego3g/repos
+            </p>
+
+
+            <input type="text" id="userGitHub" class="form-control" placeholder="Digite o nome de usuário no github"><br>
+            <button class="btn btn-primary" id="buscarUsuarioGitHub">Verificar usuário</button>
+
+
+        </div>
+      </div>
     
+
+      <div class="col-4" id="retornoGit">
+        
+      </div>
 
 
 
@@ -72,6 +99,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
